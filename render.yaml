@@ -1,0 +1,34 @@
+# Blueprint Render : "New +" > "Blueprint" et pointer vers ce dépôt Git
+services:
+  - type: web
+    name: ovh-mail-mcp
+    runtime: docker
+    # IMPORTANT : le plan gratuit bloque les ports SMTP (465/587) et se met en veille.
+    # Un plan payant est nécessaire pour envoyer des mails.
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: MAIL_USER
+        sync: false
+      - key: MAIL_PASSWORD
+        sync: false
+      - key: MCP_AUTH_TOKEN
+        sync: false
+      - key: FROM_NAME
+        sync: false
+      - key: IMAP_HOST
+        value: imap.hostinger.com
+      - key: SMTP_HOST
+        value: smtp.hostinger.com
+      - key: SMTP_PORT
+        value: "465"
+      - key: SENT_FOLDER
+        value: INBOX.Sent
+      - key: DRAFTS_FOLDER
+        value: INBOX.Drafts
+      - key: ALLOWED_RECIPIENTS
+        value: ""
+      - key: MAX_RECIPIENTS
+        value: "50"
+      - key: MAX_SENDS_PER_HOUR
+        value: "100"

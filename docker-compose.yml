@@ -1,0 +1,8 @@
+services:
+  ovh-mail-mcp:
+    build: .
+    env_file: .env
+    # Exposé uniquement en local : place un reverse proxy HTTPS ou un tunnel devant
+    ports:
+      - "127.0.0.1:8000:8000"
+    restart: unless-stopped
