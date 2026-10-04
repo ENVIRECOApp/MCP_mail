@@ -23,9 +23,9 @@ services:
       - key: SMTP_PORT
         value: "465"
       - key: SENT_FOLDER
-        value: Sent
+        value: "Objets envoyés"
       - key: DRAFTS_FOLDER
-        value: Drafts
+        value: "Brouillons"
       - key: ALLOWED_RECIPIENTS
         value: ""
       - key: MAX_RECIPIENTS
