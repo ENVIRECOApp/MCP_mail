@@ -17,15 +17,15 @@ services:
       - key: FROM_NAME
         sync: false
       - key: IMAP_HOST
-        value: imap.hostinger.com
+        value: imap.ionos.fr
       - key: SMTP_HOST
-        value: smtp.hostinger.com
+        value: smtp.ionos.fr
       - key: SMTP_PORT
         value: "465"
       - key: SENT_FOLDER
-        value: INBOX.Sent
+        value: Sent
       - key: DRAFTS_FOLDER
-        value: INBOX.Drafts
+        value: Drafts
       - key: ALLOWED_RECIPIENTS
         value: ""
       - key: MAX_RECIPIENTS
